@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:border-radius="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript~Capability</title>
+    <meta name="viewport" content="width=device-width,initial-scale=0.5">
+    <script>
+        var age = 13 + 10                                            // Number
+        var nickName = "Naman";                                     // String
+        var x = { firstName: "Naman", lastName: "Mehrotra" };      // Object
+        var cars = ["Ferrari", "Porsche", "BMW", "Lamborgini"];   // Array
+
+        // Function returns the decision whether you can vote or not
+
+        function checkAge(a) {
+            if (a >= 18)
+                return "Yes you are eligible to vote";
+            else
+                return "You are not eligible to vote";
+        }
+
+        function userDetails() {
+            return x.firstName + " " + x.lastName;
+        }
+
+        function allCars() {
+            var text = "";
+            var i;
+            for (i = 0; i < cars.length; i++) {
+                text += cars[i] + "<br>";
+            }
+            return text;
+        }
+
+        hello = () => "Hello World!";
+
+    </script>
+</head>
+
+
+<body style="background-color:powderblue;">
+    <h1>Javascript For the JS Capability </h1>
+    <div id="1" style="color:blue;">Click the button below</div>
+    <button type="button" onclick="document.getElementById('1').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+    <div id="2" style="color:red;">Enter your age</div>
+    <input type="number" id="age"><br><br>
+    <button type="button" onclick="document.getElementById('3').innerHTML=checkAge(document.getElementById('age').value)">Click for age!</button>
+    <div id="3" style="color:green;"></div>
+    <div id="4" style="color:orange;">Displaying user details (present in object)</div>
+    <button type="button" onclick="document.getElementById('5').innerHTML=userDetails()">Click for User details!</button>
+    <div id="5" style="color:maroon;"></div>
+    <div id="6" style="color:chocolate;">Click to get all cars (in Array)</div>
+    <button type="button" onclick="document.getElementById('7').innerHTML=allCars()">Click for all car details!</button>
+    <div id="7" style="color:slateblue;"></div>
+    <div id="8" style="color:blue;">Using arrow function</div>
+    <button type="button" onclick="document.getElementById('9').innerHTML=hello()">Click for arrow function!</button>
+    <div id="9" style="color:teal;"></div>
+
+</body>
+</html>
